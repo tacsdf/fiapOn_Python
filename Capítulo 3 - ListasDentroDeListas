@@ -1,0 +1,17 @@
+Este capítulo mostra a utilização de uma lista dentro de outra lista: inventário (externa) e equipamento (interna).
+
+A lista equipamento possui os campos Nome(string), Valor(float), Número serial(int) e Departamento(int).
+
+Para fazer a exclusão de um equipamento, foi utilizado um for each, conforme abaixo:
+
+  serial=int(input("Digite o serial do equipamento que será excluído: "))
+  for elemento in inventario:
+    if elemento[2]==serial:
+      inventario.remove(elemento)    
+
+No entanto, essa maneira não se garante a exclusão de todos os elementos quando houver um serial cadastrado mais de uma vez!
+Por exemplo, se dois elementos em sequência tiverem o mesmo serial, somente o 1o registro será excluído.
+
+
+
+      
