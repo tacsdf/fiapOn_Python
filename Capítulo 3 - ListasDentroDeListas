@@ -12,6 +12,17 @@ Para fazer a exclusão de um equipamento, foi utilizado um for each, conforme ab
 No entanto, essa maneira não se garante a exclusão de todos os elementos quando houver um serial cadastrado mais de uma vez!
 Por exemplo, se dois elementos em sequência tiverem o mesmo serial, somente o 1o registro será excluído.
 
+A solução encontrada é percorrer a lista novamente para verificar seriais que não foram excluídos anteriormente:
+
+serial=int(input("Digite o serial do equipamento que será excluído: "))
+for elemento in inventario:
+    if elemento[2]==serial:
+        inventario.remove(elemento)    
+        
+print("Verifica novamente")
+for elemento in inventario:
+    if elemento[2] == serial:
+       inventario.remove(elemento)
 
 
       
